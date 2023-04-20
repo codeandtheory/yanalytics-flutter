@@ -3,6 +3,5 @@
 /// More dartdocs go here.
 library yanalytics;
 
-export 'src/yanalytics_base.dart';
-
-// TODO: Export any libraries intended for clients of this package.
+export 'src/analytics_engine.dart';
+export 'src/compound_analytics_engine.dart';
