@@ -5,9 +5,14 @@ class CompoundAnalyticsEngine extends AnalyticsEngine {
 
   List<AnalyticsEngine> get engines => _engines;
 
+  /// Initialize compound analytics engine.
+  ///
+  /// `track(event:)` will be called on each engine in array order.
+  /// [engines] array of engines to combine
   CompoundAnalyticsEngine({List<AnalyticsEngine>? engines})
       : _engines = engines ?? [];
 
+  /// Add a new engine to dispatch events to
   void add({required AnalyticsEngine engine}) {
     _engines.add(engine);
   }
