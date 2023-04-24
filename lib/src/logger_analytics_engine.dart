@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'analytics_engine.dart';
 
 class LoggerAnalyticsEngine extends AnalyticsEngine
@@ -65,8 +64,8 @@ class LoggerAnalyticsEngine extends AnalyticsEngine
 
 class Logger
 {
-  String _subsystem;
-  String _category;
+  final String _subsystem;
+  final String _category;
 
   Logger(this._subsystem, this._category);
 
