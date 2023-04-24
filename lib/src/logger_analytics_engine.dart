@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'analytics_engine.dart';
 
 class LoggerAnalyticsEngine extends AnalyticsEngine
@@ -7,7 +6,8 @@ class LoggerAnalyticsEngine extends AnalyticsEngine
   Logger get logger => Logger("co.yml.yanalytics.Core", "Analytics");
 
   @override
-  void trackEvent(AnalyticsEvent event) {
+  void trackEvent(AnalyticsEvent event)
+  {
     if (event.screenName != null)
     {
       String? screenName = event.screenName;
@@ -63,13 +63,15 @@ class LoggerAnalyticsEngine extends AnalyticsEngine
   }
 }
 
-class Logger {
+class Logger
+{
   String _subsystem;
   String _category;
 
   Logger(this._subsystem, this._category);
 
-  void log(String message) {
+  void log(String message)
+  {
     print('[$_subsystem/$_category]: $message');
   }
 }

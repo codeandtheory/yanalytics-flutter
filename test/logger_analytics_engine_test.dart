@@ -1,6 +1,6 @@
 import 'package:test/test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:yanalytics/src/LoggerAnalyticsEngine.dart';
+import 'package:yanalytics/src/logger_analytics_engine.dart';
 import 'package:yanalytics/yanalytics.dart';
 
 class MockLoggerAnalyticsEngine extends Mock implements LoggerAnalyticsEngine{}
