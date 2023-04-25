@@ -5,3 +5,4 @@ library yanalytics;
 
 export 'src/analytics_engine.dart';
 export 'src/compound_analytics_engine.dart';
+export 'src/logger_analytics_engine.dart';
