@@ -1,9 +1,14 @@
 import 'analytics_engine.dart';
 
+/// A class that extends AnalyticsEngine that allows to log messages from each event 
 class LoggerAnalyticsEngine extends AnalyticsEngine
 {
+  /// The logger instance definition.
   Logger get logger => Logger("co.yml.yanalytics.Core", "Analytics");
 
+  /// Log an analytics event
+  ///
+  /// [event] the event to log
   @override
   void trackEvent(AnalyticsEvent event)
   {
@@ -33,6 +38,9 @@ class LoggerAnalyticsEngine extends AnalyticsEngine
     }
   }
 
+  /// Log an analytics event
+  ///
+  /// [factory] object that generates the event to log
   @override
   void trackEventFactory(AnalyticsEventFactory factory) {
     if (factory.event.eventName != null)
@@ -62,13 +70,20 @@ class LoggerAnalyticsEngine extends AnalyticsEngine
   }
 }
 
+/// Logger class to handle logging
 class Logger
 {
+  /// The name for the subsystem.
   final String _subsystem;
+
+  /// The name for the category.
   final String _category;
 
   Logger(this._subsystem, this._category);
 
+  /// Log a message
+  ///
+  /// [message] the message to log
   void log(String message)
   {
     print('[$_subsystem/$_category]: $message');
